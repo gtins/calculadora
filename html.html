@@ -6,37 +6,77 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Calculadora</title>
   <link href="styles.css" rel="stylesheet">
-  <script src="script.js" defer></script>
+  <link href="https://fonts.cdnfonts.com/css/minecraftia" rel="stylesheet">
 </head>
   <body>
-    <div class="calculator-grid">
-    <h1 class="letras">Calculadora</h1>
-    <h3>Primeiro Número</h1><br />
-    <input id="n1" type="numero" /><br />
-    <h3>Primeiro Número</h3><br />
-    <input id="n2" type="numero" /><br />
-    <button onclick="somar()">Somar</button>
-    <button onclick="subtrair()">Subtrair</button>
-    <button onclick="multiplicar()">Multiplicar</button>
-    <button onclick="divisao()">Dividir</button>
-    <br />
-    O resultado é <span></span>
+    <div class="fundo"> 
+      <div class="grade-calculadora">
+        <h1 class="letras">Calculadora</h1>
+        <select class="select" id="operadores" onchange="sinais()">
+          <option selected disabled> Escolha uma operação</option>
+          <option value="soma">Soma</option>
+          <option value="subtrair">Subtrair</option>
+          <option value="multiplicar">Multiplicar</option>
+          <option value="divisao">Divisão</option>
+        </select><br />
+        <h3 class="primeiro">Primeiro Número</h1>
+        <input class="input" id="n1" type="numero" /><br />
+        <sinal class="resultado"></sinal><br />
+        <h3 class="primeiro">Segundo Número</h3>
+        <input class="input" id="n2" type="numero" /><br />
+        <button class="primeiro" onclick="calc()";>Calcular</button>
+      <h3 class="primeiro">O resultado foi: </h3><span class="resultado"></span>
+      </div>
+    </div>
+    <p class="autor">Código por Gustavo Henrique Martins</p>
     <script>
-      var n1 = document.querySelector('#n1')
-      var n2 = document.querySelector('#n2')
-      var resultado = document.querySelector('span')
-        function somar() {
-          resultado.innerHTML = parseInt(n1.value) + parseInt(n2.value)
+      function calc()
+      {
+          var n1 = parseInt(document.getElementById('n1').value);
+          var n2 = parseInt(document.getElementById('n2').value);
+          var resultado = document.querySelector('span');          
+          var oper = document.getElementById('operadores').value;
+          var sinal = document.querySelector('sinal');
+
+          if(oper === 'soma')
+          {
+            resultado.innerHTML = n1 + n2
+          }
+          if(oper === 'subtrair')
+          {
+            resultado.innerHTML = n1 - n2
+          }
+          if(oper === 'divisao')
+          {
+            resultado.innerHTML = n1 / n2
+          }
+          if(oper === 'multiplicar')
+          {
+            resultado.innerHTML = n1 * n2
+          }
         }
-        function subtrair() {
-          resultado.innerHTML = parseInt(n1.value) - parseInt(n2.value)
+        function sinais ()
+        {
+          var oper = document.getElementById('operadores').value;
+          var sinal = document.querySelector('sinal');
+
+          if(oper === 'soma')
+          {
+            sinal.innerHTML = '+'
+          }
+          if(oper === 'subtrair')
+          {
+            sinal.innerHTML = '-'
+          }
+          if(oper === 'divisao')
+          {
+            sinal.innerHTML = '÷'
+          }
+          if(oper === 'multiplicar')
+          {
+            sinal.innerHTML = 'x'
+          }
         }
-        function divisao() {
-          resultado.innerHTML = parseInt(n1.value) / parseInt(n2.value)
-        }
-        function multiplicar() {
-          resultado.innerHTML = parseInt(n1.value) * parseInt(n2.value)
-        }
-    </script>
-  </body>
+  </script>
+</body>
 </html>
