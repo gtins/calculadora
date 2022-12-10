@@ -28,7 +28,8 @@ body {
 .select {
   border-radius: 15px;
   background-color:#89e7f3;
-  font-family: 'Minecraftia', sans-serif;  
+  font-family: 'Minecraftia', sans-serif;
+  text-align: center;  
 }
 .select:hover{
   cursor: pointer;
@@ -40,7 +41,7 @@ body {
   color: aliceblue;
   font-weight: bold;
 }
-.grade-calculadora {
+.calculadora {
   border: 5px solid white;  
   position: absolute;
   background-color: rgb(18, 149, 201);
@@ -52,7 +53,7 @@ body {
   display:grid;
   justify-items: center;
 }
-.grade-calculadora > button {
+.calculadora > button {
   cursor: pointer;
   font-size: 1.5rem;
   border: 3px solid white;
@@ -61,7 +62,7 @@ body {
   border-radius: 15px;
   width:auto
 }
-.grade-calculadora > button:hover {
+.calculadora > button:hover {
   background-color: #00FF6C;
 }
 .fundo {

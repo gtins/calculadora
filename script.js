@@ -43,7 +43,7 @@ var sinal = document.querySelector('sinal');
     }
     if(oper === 'divisao')
     {
-    sinal.innerHTML = '÷'
+    sinal.innerHTML = '/'
     }
     if(oper === 'multiplicar')
     {
