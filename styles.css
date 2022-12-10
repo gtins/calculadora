@@ -22,11 +22,17 @@ body {
 .input {
   border-radius: 15px;
   background-color:#89e7f3;
+  font-family: 'Minecraftia', sans-serif;  
+  text-align: center;
 }
 .select {
   border-radius: 15px;
   background-color:#89e7f3;
   font-family: 'Minecraftia', sans-serif;  
+}
+.select:hover{
+  cursor: pointer;
+  background-color: #00FF6C;
 }
 .resultado {
   text-align: center;
