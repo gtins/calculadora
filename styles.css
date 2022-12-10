@@ -24,12 +24,14 @@ body {
   background-color:#89e7f3;
   font-family: 'Minecraftia', sans-serif;  
   text-align: center;
+  border: 3px solid white;
 }
 .select {
   border-radius: 15px;
   background-color:#89e7f3;
   font-family: 'Minecraftia', sans-serif;
   text-align: center;  
+  border: 3px solid white;
 }
 .select:hover{
   cursor: pointer;
